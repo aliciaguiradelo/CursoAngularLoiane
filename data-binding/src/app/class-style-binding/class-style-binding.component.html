@@ -3,5 +3,38 @@
     <h3>
       Class e Style Binding
     </h3>
+    <div>
+      Selecione uma classe:
+      <select #classe (change)="0">
+        <option valeu="alert-success">Sucesso</option>
+        <option valeu="alert-info">Info</option>
+        <option valeu="alert-warning">Alerts</option>
+        <option valeu="alert-danger">Erro</option>
+      </select>
+      <br><br>
+
+      <div class="alert {{classe.value}}" role="alert">
+        Texto colorido confirme valor do combobox
+      </div>
+
+      <div class="alert" role="alert" [class.alert-success]="classe.value=='alert-sucess'">
+        Sucesso
+      </div>
+      <div class="alert" role="alert" [class.alert-info]="classe.value=='alert-info'">
+        Info
+      </div>
+      <div class="alert" role="alert" [class.alert-warning]="classe.value=='alert-warning'">
+        Atenção
+      </div>
+      <div class="alert" role="alert" [class.alert-danger]="classe.value=='alert-danger'">
+        Erro!
+      </div>
+      <div class="alert alert-danger" role="alert" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none' ">
+        esse texto só aparece se houver erro
+      </div>
+
+
+    </div>
+    <button class="btn btn-primary">Primeiro Botão com Bootstrap</button>
   </article>
 </section>
