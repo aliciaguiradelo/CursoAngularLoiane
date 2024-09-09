@@ -2,8 +2,20 @@
     <article>
         <h3>Two way data binding</h3>
         <div>
+            <!-- <input type="text"
+            [value]="nome"
+            (input)="nome = $event.target.value">
+            <p>Você digitou o nome: {{nome}}</p> -->
+            <br>
             <input type="text"
-            [value]="nome">
+            [ngModel]="nome"
+            (ngModelChange)="nome = $event">
+            <input type="text" [(ngModel)]="nome">
+        </div>
+        <div>
+            <input type="text" [(ngModel)]="pessoa.nome">
+            <input type="text" [(ngModel)]="pessoa.idade">
+            <p>Meu nome é {{pessoa.nome}} e tenha {{pessoa.idade}} anos de idade</p>
         </div>
     </article>
 </section>
