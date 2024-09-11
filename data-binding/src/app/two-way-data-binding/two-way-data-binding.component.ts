@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { InputOutptCompoComponent } from '../input-outpt-compo/input-outpt-compo.component';
+
 
 @Component({
   selector: 'app-two-way-data-binding',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, InputOutptCompoComponent],
   templateUrl: './two-way-data-binding.component.html',
   styleUrl: './two-way-data-binding.component.css'
 })
 export class TwoWayDataBindingComponent {
-  nome: string = 'ABC';
+  nomeUm: string = 'ABC';
+  NomeCurso:string= 'Angular';
   pessoa: any = {
     nome : 'def',
     idade : 23

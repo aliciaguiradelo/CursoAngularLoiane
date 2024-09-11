@@ -8,14 +8,15 @@
             <p>Você digitou o nome: {{nome}}</p> -->
             <br>
             <input type="text"
-            [ngModel]="nome"
-            (ngModelChange)="nome = $event">
-            <input type="text" [(ngModel)]="nome">
+            [ngModel]="nomeUm"
+            (ngModelChange)="nomeUm = $event">
+            <input type="text" [(ngModel)]="nomeUm">
         </div>
         <div>
-            <input type="text" [(ngModel)]="pessoa.nome">
+            <input type="text" [(ngModel)]="pessoa.nomeUm">
             <input type="text" [(ngModel)]="pessoa.idade">
-            <p>Meu nome é {{pessoa.nome}} e tenha {{pessoa.idade}} anos de idade</p>
+            <p>Meu nome é {{pessoa.nomeUm}} e tenha {{pessoa.idade}} anos de idade</p>
         </div>
+        <app-input-outpt-compo [nome]="NomeCurso"></app-input-outpt-compo>
     </article>
 </section>
