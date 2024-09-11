@@ -13,6 +13,7 @@ import { InputOutptCompoComponent } from '../input-outpt-compo/input-outpt-compo
 export class TwoWayDataBindingComponent {
   nomeUm: string = 'ABC';
   NomeCurso:string= 'Angular';
+  valorInicial=15;
   pessoa: any = {
     nome : 'def',
     idade : 23
