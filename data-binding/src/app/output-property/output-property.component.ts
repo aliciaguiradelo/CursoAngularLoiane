@@ -9,7 +9,7 @@ import EventEmitter from 'events';
   styleUrl: './output-property.component.css'
 })
 export class OutputPropertyComponent {
-  valor: number = 0;
+  @Input() valor: number = 0;
 
   // @Output() mudouValor = new EventEmitter();
   // novoValor: number;
