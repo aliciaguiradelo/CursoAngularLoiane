@@ -16,9 +16,9 @@ export class InputOutptCompoComponent {
   @Input('nome') NomeCurso: string = '';
   valorInicial=15;
 
-  onMudouValor(evento){
-    console.log(evento.novoValor);
+  // onMudouValor(evento){
+  //   console.log(evento.novoValor);
 
-  }
+  // }
 
 }
